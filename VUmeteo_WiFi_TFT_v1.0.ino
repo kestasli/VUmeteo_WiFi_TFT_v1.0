@@ -47,7 +47,7 @@ void setup() {
   delay(10);
 
   tft.begin();
-  tft.setRotation(3);
+  tft.setRotation(1);
   tft.fillScreen(ILI9341_BLACK);
 
   temperatureDsp = NumberIndicator(tft, 0, 120, &FreeSansBold56pt7b, ALIGN_TOPC);
@@ -73,7 +73,7 @@ void setup() {
 
   //Read station ID from EEPROM
   station = eepromRead();
-  
+
   WiFi.mode(WIFI_STA);
   //WiFi.begin(ssid, password);
 
